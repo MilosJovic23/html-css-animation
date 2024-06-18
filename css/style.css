@@ -1,0 +1,64 @@
+* {
+	margin: 0px;
+	padding: 0;
+}
+.kvadrat {
+	width: 300px;
+	height: 300px;
+	background-color: red;
+	margin: 50px;
+	animation-name: promenaBoje;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+.animacija {
+	width: 200px;
+	height: 200px;
+	background-color: yellow;
+	animation-name: parcijalnaAnimacija;
+	animation-duration: 10s;
+	animation-iteration-count: 2;
+}
+.slajder {
+	width: 50px;
+	height: 50px;
+	background-color: rgb(56, 56, 197);
+}
+.slajder:hover {
+	animation-name: slajderAnimacija;
+	animation-duration: 3s;
+}
+@keyframes slajderAnimacija {
+	25% {
+		border-radius: 50%;
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		margin-left: 100px;
+	}
+}
+
+@keyframes parcijalnaAnimacija {
+	0% {
+		background-color: red;
+	}
+	15% {
+		background-color: blue;
+	}
+	40% {
+		background-color: red;
+	}
+}
+@keyframes promenaBoje {
+	from {
+		background-color: red;
+	}
+	to {
+		background-color: yellow;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+	}
+}
